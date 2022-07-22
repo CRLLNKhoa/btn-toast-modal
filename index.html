@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/btn.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <link rel="stylesheet" href="./assets/css/message.css">
+    <link rel="stylesheet" href="./assets/css/toastMessage.css">
+    <link rel="stylesheet" href="assets/icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container container--btn">
+            <div class="list list--first">
+                <button class="btn btn--success btn--size-s">GO TO NEXT APPROVAL</button>
+                <button class="btn btn--wrong btn--size-s">OK</button>
+                <button class="btn btn--error btn--size-s">TRY AGAIN</button>
+            </div>
+            <div class="list list-second">
+                <button class="btn btn--success">GO TO NEXT APPROVAL</button>
+                <button class="btn btn--wrong">OK</button>
+                <button class="btn btn--error">TRY AGAIN</button>
+            </div>
+            <div class="list list--third">
+                <button class="btn btn--success btn--disable btn--size-l">GO TO NEXT APPROVAL</button>
+                <button class="btn btn--wrong btn--size-l">OK</button>
+                <button class="btn btn--error btn--size-l">TRY AGAIN</button>  
+            </div>
+        </div>
+        <div class="container container--message">
+            <div class="message message--succcessful">
+                    <p class="message__btnClose ti-close"></p>
+                    <img src="./assets/img/successful.png" alt="" class="message__img">
+                    <h2 class="message__heading">SUCCESSFUL</h2>
+                    <p class="message__sub">You have approved claim.</p>
+                    <hr class="message__line">
+                    <button class="message__btnSubmit btnSubmit--successful">GO TO NEXT APPROVAL</button>   
+            </div>
+            <div class="message message--wrong">
+                <p class="message__btnClose ti-close"></p>
+                <img src="./assets/img/wrong.png" alt="" class="message__img">
+                <h2 class="message__heading">WRONG</h2>
+                <p class="message__sub">You have approved claim.</p>
+                <hr class="message__line">
+                <button class="message__btnSubmit btnSubmit--wrong">OK</button>   
+            </div>
+            <div class="message message--error ">
+                <p class="message__btnClose ti-close"></p>
+                <img src="./assets/img/error.png" alt="" class="message__img">
+                <h2 class="message__heading">ERROR</h2>
+                <p class="message__sub">You have approved claim.</p>
+                <hr class="message__line">
+                <button class="message__btnSubmit btnSubmit--error btnSubmit--disable">TRY AGAIN</button>   
+            </div>
+        </div>
+    </div>
+    <div id="toast"></div>
+    <div class="btnToast">
+        <button class="btn btn--success" onclick="showSuccessToast()">Show toast message success</button>
+        <button class="btn btn--error" onclick="showErrorToast()">Show toast message error</button>
+        <button class="btn btn--info" onclick="showInfoToast()">Show toast message info</button>
+        <button class="btn btn--wrong" onclick="showWrongToast()">Show toast message wrong</button>
+        <button class="btn btn--success btn--size-s js-buy-tickets">Modal</button>
+    </div>
+    <div class="modal">
+        <div class="container-modal">
+            <div class="close-modal">
+                <i class="ti-close"></i>
+            </div>
+            <div class="heading-modal">
+                <i class="ti-bag"></i>
+                Tickets
+            </div>
+            <div class="body-modal">
+                <i class="ti-shopping-cart">&nbsp;Tickets, $15 per person <label for="ti-shopping-cart"></label></i><br>
+                <input type="number" name="" class="input" id="input-tickets" placeholder="Nhập số lượng..."><br>
+                <i class="ti-u  ser"><label for="ti-user">&nbsp;Send To</label></i><br>
+                <input type="email" name="" class="input id="input-mail" placeholder="Nhập người nhận..."><br>
+                <button class="btn-pay" onclick="showSuccessToast()">PAY<i class="ti-check"></i></button><br>
+                <button class="btn-close">Close<i class="ti-close"></i></button>
+                <p class="need-help">Need <a href="#">Help?</a></p>
+            </div>
+        </div>
+    </div><br>
+    <div class="footer">make by CrlLNKhoa</div>
+</body>
+<script src="./assets/js/toastMessage.js"></script>
+<script src="./assets/js/modal.js"></script>
+</html> 

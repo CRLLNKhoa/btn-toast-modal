@@ -1,0 +1,84 @@
+/* ===== Message ===== */
+/* Main */ 
+.main{
+    display: flex;
+    flex-direction: column;
+}
+/* Container--message */
+.container--message{
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+/* Message*/
+.message{
+    border: 1px solid rgba(black, black, black, .5);
+    border-radius: 20px;
+    width: 40%;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px #999999;
+}
+.message__btnClose{
+    align-self: flex-end;
+    padding-top: 10px;
+    padding-right: 10px;
+    display:block;
+    opacity: 0.2;
+    cursor: pointer;
+}
+.message__img{
+    width: 50%;
+    height: 30%;
+    align-self: center;
+    
+}
+.message__heading{
+    align-self: center;
+    margin: 10px;
+}
+.message__sub{
+    align-self: center;
+    margin: 10px;
+}
+.message__line{
+    width: 80%;
+    opacity: 0.2;
+    background-color: black;
+    align-self: center; 
+    margin: 10px;
+}
+.message__btnSubmit{
+    align-self: center;
+    padding: 10px 40px;
+    margin: 10px 0 20px 0;
+    border-radius: 20px;
+    border:none;
+    max-width: 80%;
+    min-width: 60%;
+    cursor: pointer;
+    transition: opacity .2s ease;
+}
+.btnSubmit--successful{
+    background-color: rgb(54, 186, 54);
+    color: white;
+}
+.btnSubmit--wrong{
+    background-color: rgb(237, 226, 13);
+    color: white;
+}
+.btnSubmit--error{
+    background-color: rgb(212, 78, 11);
+    color: white;
+}
+.message__btnSubmit:hover{
+    opacity: 0.8;
+}
+.btnSubmit--disable{
+    opacity: 0.4!important;
+    cursor: default;
+}
